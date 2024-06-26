@@ -9,4 +9,5 @@ def sum_matrix():
     matrix = np.array(data['matrix'])
     # Sum the elements of the matrix
     result_sum = np.sum(matrix)
+    result_sum = result_sum.item();
     return jsonify(result_sum=result_sum)
