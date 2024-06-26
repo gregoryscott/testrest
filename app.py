@@ -1,10 +1,10 @@
-from flask import Flask, jsonify, request
+from flask import Flask, request, jsonify
 import numpy as np
 
 app = Flask(__name__)
 
-@app.route('/api/process', methods=['POST'])
-def process():
+@app.route('/api/sum_matrix', methods=['POST'])
+def sum_matrix():
     data = request.json
     matrix = np.array(data['matrix'])
     # Sum the elements of the matrix
